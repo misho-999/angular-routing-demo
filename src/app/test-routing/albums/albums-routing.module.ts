@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddAlbumComponent } from './add-album/add-album.component';
 import { AlbumComponent } from './album/album.component';
 import { AlbumsComponent } from './albums.component';
+import { CreateAlbumComponent } from './create-album/create-album.component';
 
 
 
@@ -15,7 +15,7 @@ const routes: Routes = [
      
       {
         path: 'create',
-        component: AddAlbumComponent,
+        component: CreateAlbumComponent,
         //   canActivate: [PermissionGuard],
         data: {
           permissions: ['DEVICE_CREATE']

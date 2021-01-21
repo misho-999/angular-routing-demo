@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { PassDataService } from 'src/app/shered/data/pass-data.service';
+import { IAlbum } from 'src/app/shered/dto/album';
 
 @Component({
   selector: 'app-album',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumComponent implements OnInit {
 
-  constructor() { }
+  @Input() album: IAlbum;
+  constructor(private passDataService: PassDataService) { }
 
   ngOnInit(): void {
-  }
 
+  }
 }

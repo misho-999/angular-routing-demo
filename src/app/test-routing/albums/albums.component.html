@@ -1,7 +1,5 @@
-<p>albums works!</p>
+<h1>Albums</h1>
 <button routerLink="">Home</button>
-<div *ngFor="let album of albums">
-    {{album.id}}
-    {{album.title}}
-    {{album.userId}}
+<div *ngFor="let a of albums">
+    <app-album [album]='a'></app-album>
 </div>

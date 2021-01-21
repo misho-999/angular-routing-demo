@@ -8,14 +8,13 @@ import { UsersService } from 'src/app/shered/users.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
- users: Array<IUser>
+  
+  users: Array<IUser>
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
-    this.usersService.getAllUsers().subscribe((data)=> {
+    this.usersService.getAllUsers().subscribe((data) => {
       this.users = data;
     })
   }
-
 }

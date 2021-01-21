@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { Observable, throwError, Subject, of } from 'rxjs';
 import { catchError, map, mergeMap, retryWhen, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { UrlService } from './url.service';
-import { Response } from './response';
+import { UrlService } from '../url.service';
+import { Response } from '../response';
 
 @Injectable({
   providedIn: 'root'

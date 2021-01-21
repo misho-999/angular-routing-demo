@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UrlSegment } from '@angular/router';
 import { Observable } from 'rxjs';
-import { DataService } from './data.service';
+import { DataService } from './data/data.service';
 import { IAddress } from './dto/address';
 import { IAlbum } from './dto/album';
 import { UrlService } from './url.service';
