@@ -6,15 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestRoutingComponent } from './test-routing/test-routing.component';
 import { HomeComponent } from './test-routing/home/home.component';
-import { CarModule } from './test-routing/car/car.module';
-import { PersonModule } from './test-routing/person/person.module';
-import { StudentModule } from './test-routing/student/student.module';
+import { UsersComponent } from './test-routing/users/users.component';
+import { TodosComponent } from './test-routing/todos/todos.component';
+import { AlbumsComponent } from './test-routing/albums/albums.component';
+import { AlbumsModule } from './test-routing/albums/albums.module';
+import { TodosModule } from './test-routing/todos/todos.module';
+import { UsersModule } from './test-routing/users/users.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestRoutingComponent,
-    HomeComponent
+    HomeComponent,
+    UsersComponent,
+    TodosComponent,
+    AlbumsComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +28,9 @@ import { StudentModule } from './test-routing/student/student.module';
     HttpClientModule,
     HttpClientXsrfModule.disable(),
     AppRoutingModule,
-    CarModule,
-    PersonModule,
-    StudentModule
+    AlbumsModule,
+    TodosModule,
+    UsersModule
   ],
   // providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]

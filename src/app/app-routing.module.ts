@@ -14,16 +14,16 @@ const routes: Routes = [
     },
   },
   {
-    path: 'cars',
-    loadChildren: () => import('./test-routing/car/car.module').then(m => m.CarModule)
+    path: 'albums',
+    loadChildren: () => import('./test-routing/albums/albums.module').then(m => m.AlbumsModule)
   },
   {
-    path: 'people',
-    loadChildren: () => import('./test-routing/person/person.module').then(m => m.PersonModule)
+    path: 'todos',
+    loadChildren: () => import('./test-routing/todos/todos.module').then(m => m.TodosModule)
   },
   {
-    path: 'students',
-    loadChildren: () => import('./test-routing/student/student.module').then(m => m.StudentModule)
+    path: 'users',
+    loadChildren: () => import('./test-routing/users/users.module').then(m => m.UsersModule)
   },
   {
     path: '**',
