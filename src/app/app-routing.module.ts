@@ -8,10 +8,6 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    // canActivate: [AuthenticationGuard],
-    resolve: {
-      // i18nBundlesLoaded: I18nResolverService
-    },
   },
   {
     path: 'albums',
@@ -33,7 +29,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
-  exports: [RouterModule],
-  providers: []
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

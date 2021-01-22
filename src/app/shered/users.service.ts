@@ -15,4 +15,8 @@ export class UsersService {
   getAllUsers(): Observable<IUser[]> {
     return this.dataService.get<IUser[]>('users');
   }
+
+  getUserById(userId: number) {
+    return this.dataService.get<IUser>(`${userId}`);
+  }
 }

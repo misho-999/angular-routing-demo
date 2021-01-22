@@ -17,8 +17,6 @@ export class AlbumsComponent implements OnInit {
 
   ngOnInit(): void {
     this.albumsService.getAllAlbums().subscribe((data) => {
-      console.log(data);
-      
       this.albums = data;
     })
   }

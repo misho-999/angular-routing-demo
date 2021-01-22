@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { PassDataService } from 'src/app/shered/data/pass-data.service';
+import { Router } from '@angular/router';
+import { DataSubjectService } from 'src/app/shered/data-subject.service';
 import { IAlbum } from 'src/app/shered/dto/album';
 
 @Component({
@@ -10,9 +11,17 @@ import { IAlbum } from 'src/app/shered/dto/album';
 export class AlbumComponent implements OnInit {
 
   @Input() album: IAlbum;
-  constructor(private passDataService: PassDataService) { }
+  constructor(
+    private router: Router,
+    private dataSubjectService: DataSubjectService
+  ) { }
 
   ngOnInit(): void {
 
+  }
+
+  goToAlbum() {
+    this.dataSubjectService.changeMessage(this.album)
+    this.router.navigate(['/albums/details/:' + `${this.album.id}`]);
   }
 }

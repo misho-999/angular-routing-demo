@@ -1,0 +1,8 @@
+<h1>Users</h1>
+<button routerLink="">Home</button>
+<div *ngFor="let u of users">
+    <!-- Pass data by binding and input in child component -->
+    <app-user [user]='u'></app-user>
+</div>
+
+
