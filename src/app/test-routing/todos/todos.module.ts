@@ -4,6 +4,8 @@ import { TodoComponent } from './todo/todo.component';
 import { CreateTodoComponent } from './create-todo/create-todo.component';
 import { TodosRoutingModule } from './todos-routing.module';
 import { TodosComponent } from './todos.component';
+import { TodosDetailsComponent } from './todos-details/todos-details.component';
+import { TodosCreateComponent } from './todos-create/todos-create.component';
 
 
 
@@ -11,7 +13,9 @@ import { TodosComponent } from './todos.component';
   declarations: [
     TodosComponent,
     TodoComponent,
-    CreateTodoComponent
+    CreateTodoComponent,
+    TodosDetailsComponent,
+    TodosCreateComponent
   ],
   imports: [
     CommonModule,
