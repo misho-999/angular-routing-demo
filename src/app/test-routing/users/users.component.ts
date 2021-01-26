@@ -12,7 +12,7 @@ import { UsersService } from 'src/app/shered/users.service';
 })
 export class UsersComponent implements OnInit {
   displayedColumns: string[] = ['userId', 'username', 'name', 'email', 'userAddressCity', 'userAddressStreet', 'userAddressSuite', 'userAddressZipcode'];
-  pageSize: number[] = [2, 5, 8];
+  pageSize: number[] = [5, 10, 15];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -29,4 +29,9 @@ export class UsersComponent implements OnInit {
       this.dataSource.sort = this.sort;
     })
   }
+
+  getSelectedRow(row) {
+    console.log(row);
+  }
+  
 }

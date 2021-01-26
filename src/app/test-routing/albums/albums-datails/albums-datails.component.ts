@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { DataSubjectService } from 'src/app/shered/data-subject.service';
 import { IAlbum } from 'src/app/shered/dto/album';
 
@@ -10,7 +11,7 @@ import { IAlbum } from 'src/app/shered/dto/album';
 export class AlbumsDatailsComponent implements OnInit {
 
   currentAlbum: IAlbum;
-
+  @Input() albumSubject: BehaviorSubject <{ album: IAlbum}>;
   constructor(private dataSubjectService: DataSubjectService) { }
 
   ngOnInit(): void {
@@ -18,5 +19,4 @@ export class AlbumsDatailsComponent implements OnInit {
       this.currentAlbum = data;
     })
   }
-
 }
