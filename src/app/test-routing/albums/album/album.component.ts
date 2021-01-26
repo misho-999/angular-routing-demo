@@ -21,7 +21,13 @@ export class AlbumComponent implements OnInit {
   }
 
   goToAlbum() {
+    //pass album to album datails by through DataSubjectService
     this.dataSubjectService.changeMessage(this.album)
     this.router.navigate(['/albums/details/:' + `${this.album.id}`]);
+  }
+
+  goToUser() {
+   
+    return
   }
 }

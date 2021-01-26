@@ -7,6 +7,8 @@ import { UserComponent } from './user/user.component';
 import { UsersComponent } from './users.component';
 import { UserDeailsComponent } from './user-deails/user-deails.component';
 import { AllUsersComponent } from './all-users/all-users.component';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -20,7 +22,9 @@ import { AllUsersComponent } from './all-users/all-users.component';
   ],
   imports: [
     CommonModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    MatTableModule,
+    MatPaginatorModule,
   ]
 })
 export class UsersModule { }

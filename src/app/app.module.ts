@@ -9,6 +9,7 @@ import { HomeComponent } from './test-routing/home/home.component';
 import { PageNotFoundComponent } from './test-routing/page-not-found/page-not-found.component';
 import { TodosModule } from './test-routing/todos/todos.module';
 import { UsersModule } from './test-routing/users/users.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UsersModule } from './test-routing/users/users.module';
     AlbumsModule,
     TodosModule,
     UsersModule,
+    BrowserAnimationsModule,
   ],
   // providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]

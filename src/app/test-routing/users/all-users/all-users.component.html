@@ -1,8 +1,42 @@
 <h1>Users</h1>
 <button routerLink="">Home</button>
-<div *ngFor="let u of users">
-    <!-- Pass data by binding and input in child component -->
-    <app-user [user]='u'></app-user>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="userId">
+      <mat-header-cell *matHeaderCellDef> User Id </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="username">
+      <mat-header-cell *matHeaderCellDef> Username </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.username}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef> E-mail </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="userAddressCity">
+      <mat-header-cell *matHeaderCellDef>User Address Sity </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.address.city}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="userAddressStreet">
+      <mat-header-cell *matHeaderCellDef> User Address Street </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.address.street}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="userAddressSuite">
+      <mat-header-cell *matHeaderCellDef> User Address Suite </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.address.suite}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="userAddressZipcode">
+      <mat-header-cell *matHeaderCellDef> User Address Zipcode </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.address.zipcode}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </table>
+  <mat-paginator [pageSizeOptions]="pageSize" showFirstLastButtons></mat-paginator>
 </div>
-
-
