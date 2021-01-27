@@ -22,6 +22,10 @@ const routes: Routes = [
     loadChildren: () => import('./test-routing/users/users.module').then(m => m.UsersModule)
   },
   {
+    path: 'photos',
+    loadChildren: () => import('./test-routing/photos/photos.module').then(m => m.PhotoModule)
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   },

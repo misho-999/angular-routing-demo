@@ -1,0 +1,6 @@
+<p>photos works!</p>
+<mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let photo of photos">
+        <app-photo #comp [currentPhoto]='photo' (click)='getComponent(comp)'></app-photo>
+    </mat-grid-tile>
+</mat-grid-list>

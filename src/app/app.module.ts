@@ -10,12 +10,16 @@ import { PageNotFoundComponent } from './test-routing/page-not-found/page-not-fo
 import { TodosModule } from './test-routing/todos/todos.module';
 import { UsersModule } from './test-routing/users/users.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PhotosComponent } from './test-routing/photos/photos.component';
+import { PhotoComponent } from './test-routing/photos/photo/photo.component';
+import { PhotoModule } from './test-routing/photos/photos.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+  
   ],
   imports: [
     AppRoutingModule,
@@ -26,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AlbumsModule,
     TodosModule,
     UsersModule,
+    PhotoModule,
     BrowserAnimationsModule,
   ],
   // providers: [httpInterceptorProviders],
