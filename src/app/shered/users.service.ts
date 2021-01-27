@@ -16,7 +16,7 @@ export class UsersService {
     return this.dataService.get<IUser[]>('users');
   }
 
-  getUserById(userId: number) {
-    return this.dataService.get<IUser>(`${userId}`);
+  getUserById(userId: string) {
+    return this.dataService.get<IUser>(`users/${userId}`);
   }
 }

@@ -3,23 +3,28 @@ import { CommonModule } from '@angular/common';
 import { UsersRoutingModule } from './users-routing.module';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UsersComponent } from './users.component';
-import { UserDeailsComponent } from './user-deails/user-deails.component';
+import { UserDetailsComponent } from './user-deails/user-deails.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { UserComponent } from './user/user.component';
+
 
 @NgModule({
   declarations: [
     UsersComponent,
     CreateUserComponent,
-    UserDeailsComponent,
+    UserDetailsComponent,
+    UserComponent,
   ],
   imports: [
     CommonModule,
     UsersRoutingModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatButtonModule,
   ]
 })
 export class UsersModule { }

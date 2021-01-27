@@ -1,5 +1,7 @@
 mat-card-content, mat-card-title{
   text-align: left;
+  font-size: 15px;
+  display: flex;
 }
 
 mat-card img{

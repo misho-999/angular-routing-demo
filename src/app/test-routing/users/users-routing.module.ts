@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateUserComponent } from './create-user/create-user.component';
-import { UserDeailsComponent } from './user-deails/user-deails.component';
+import { UserDetailsComponent } from './user-deails/user-deails.component';
+import { UserComponent } from './user/user.component';
 import { UsersComponent } from './users.component';
 
 const routes: Routes = [
@@ -12,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'details/:id',
-    component: UserDeailsComponent
+    component: UserDetailsComponent
+  },
+  {
+    path: ':id',
+    component: UserComponent
   },
   {
     path: 'create',

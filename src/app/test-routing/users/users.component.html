@@ -34,9 +34,15 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header>User Address Zipcode</th>
       <td mat-cell *matCellDef="let row">{{row.address.zipcode}}</td>
     </ng-container>
+    <ng-container matColumnDef="link">
+      <mat-header-cell  *matHeaderCellDef >Link</mat-header-cell>
+      <mat-cell *matCellDef="let row" >
+           <button mat-button (click)='goToUserFromDB(row)' >Go to User</button>
+      </mat-cell>
+    </ng-container>
 
     <mat-header-row *matHeaderRowDef = "displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns" (click)="getSelectedRow(row)"></mat-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns" (click)="goToUserFromParent(row)"></mat-row>
   </table>
 </div>
 <mat-paginator [pageSizeOptions]="pageSize" showFirstLastButtons></mat-paginator>
